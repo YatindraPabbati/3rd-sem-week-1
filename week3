@@ -1,0 +1,134 @@
+//Student
+#include<iostream>
+using namespace std;
+class student{
+    public:
+    int roll_no;
+    string name;
+    void setdata(){
+        roll_no = 2;
+        name = "Jhon";
+    }
+    void display(){
+        cout<<roll_no<<endl;
+        cout<<name;
+    }
+};
+
+int main(){
+       
+ student s;
+ s.setdata();
+s.display();
+return 0;}
+
+
+//Understanding Class and Object
+#include<iostream>
+using namespace std;
+class temp{
+    public:
+    int age;
+    char name[20];
+    void setdata(){
+       cin>>age;
+       cin>>name;
+    }
+    void display(){
+        cout<<age<<endl;
+        cout<<name<<endl;
+    }
+};
+int main()
+{temp t;
+ t.setdata();
+  t.display();
+  return 0;}
+  
+ 
+//circle
+#include<iostream>
+using namespace std;
+class circle{
+    public:
+int radius;
+float ar;
+float peri;
+void getdata(){
+    cin>>radius;
+}
+void area(){
+ar=3.14*radius*radius;
+cout<<ar<<endl;
+}
+void perimeter(){
+    peri= 2*3.14*radius;
+    cout<<peri;
+}
+};
+
+int main(){
+circle c;
+c.getdata();
+c.area();
+c.perimeter();
+return 0;}
+
+
+//triangle
+#include<iostream>
+using namespace std;
+class cal{
+public:
+int a,b,c;
+int area;
+void getdata(){
+    cin>>a>>b>>c;
+}
+void ar(){
+area = a*b*c;
+cout<<area;
+}
+};
+
+ int main(){
+ cal c;
+c.getdata();
+c.ar();
+
+    return 0;
+}
+
+
+//room
+#include <iostream>
+using namespace std;
+
+class Room {
+    int length;
+    int breadth;
+    int height;
+
+    public:
+    Room(int l, int b, int h) {
+        length = l;
+        breadth = b;
+        height = h;
+    }
+
+    int computer_volume() {
+        return (length * breadth * height);
+    }
+
+    int compute_area() {
+        return 2*(length * breadth + length * height + height * breadth);
+    }
+};
+
+int main() {
+    Room room(3, 4, 5);
+    cout << room.compute_area() << endl << room.computer_volume();
+    return 0;
+}
+
+
