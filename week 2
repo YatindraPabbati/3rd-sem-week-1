@@ -1,0 +1,163 @@
+//positive  or negative
+#include <iostream>
+using namespace std;
+
+class NegativeOrPositive {
+    int number;
+
+    public:
+    void getInput() {
+        cout << "Enter Number: ";
+        cin >> number;
+    }
+
+    void positiveOrNegative() {
+        if (number > 0) {
+            cout << "Positive";
+        } else if (number < 0) {
+            cout << "Negative";
+        } else {
+            cout << "Zero";
+        }
+    }
+};
+
+int main() {
+    NegativeOrPositive negativeOrPositive;
+    negativeOrPositive.getInput();
+    negativeOrPositive.positiveOrNegative();
+return 0;
+}
+
+
+//leap year
+#include <iostream>
+using namespace std;
+
+class LeapYear {
+    int year;
+
+    public:
+    void getInput() {
+        cout << "Enter year: ";
+        cin >> year;
+    }
+
+    void leapYearOrNot() {
+        if ((year%400==0 || year%100!=0) &&(year%4==0)) {
+            cout << "Leap Year";
+        } else {
+            cout << "Not a Leap Year";
+        }
+    }
+};
+
+int main () {
+    LeapYear leapYear;
+    leapYear.getInput();
+    leapYear.leapYearOrNot();
+return 0;
+}
+
+//largest element
+#include <iostream>
+#include <climits>
+using namespace std;
+
+class LargestElement {
+    int n;
+    int *arr;
+
+    public:
+    LargestElement(int size) {
+        n = size;
+        arr = new int[size];
+        cout << "Enter " << size << " integers: ";
+        for (int i = 0; i < size; i++) {
+            cin >> arr[i];
+        }
+    }
+
+    void getLargestElements() {
+        int largest = INT_MIN;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] > largest) {
+                largest = arr[i];
+            }
+        }
+        cout << "Largest Element: " << largest;
+    }
+
+};
+
+int main() {
+    LargestElement largestElement(4);
+    largestElement.getLargestElements();
+    return 0;
+}
+
+
+//change string
+#include <iostream>
+using namespace std;
+
+class ChangeString {
+    string str;
+
+    public:
+    void getInput() {
+        cout << "Enter string: ";
+        cin >> str;
+    }
+
+    void changeString() {
+        for (int i = 0; i < str.length(); i++) {
+            str[i] += 1;
+        }
+    }
+
+    void printString() {
+        cout << str;
+    }
+};
+
+int main() {
+    ChangeString changeString;
+    changeString.getInput();
+    changeString.changeString();
+    changeString.printString();
+    return 0;
+}
+
+
+//capitalize first letter
+#include <iostream>
+#include <cctype>
+#include <string.h>
+using namespace std;
+
+class CapitalizeFirstLetter {
+    string str;
+
+    public:
+    void getInput() {
+        cout << "Enter String: ";
+        getline(cin, str);
+    }
+
+    void capitalizeFirstLetter() {
+        for (int i = 0; i < str.length(); i++) {
+            if (str[i-1] == ' ' || i == 0) {
+                str[i] = toupper(str[i]);
+            }
+        }
+        cout << str;
+    }
+};
+
+int main() {
+    CapitalizeFirstLetter capitalizeFirstLetter;
+    capitalizeFirstLetter.getInput();
+    capitalizeFirstLetter.capitalizeFirstLetter();
+    return 0;
+}
