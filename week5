@@ -1,0 +1,159 @@
+//student 
+#include <iostream>
+#include<string>
+#include<algorithm>
+using namespace std;
+
+
+ class student{
+ string name;
+    public:
+ student(){
+  this->name = "unknown";
+ }
+ void getdata(){
+  cin>>name;
+ }
+ void print(){
+  cout<<"Your Name is "<<name;
+ }
+ };
+ int main() {
+     student s;
+     s.getdata();
+     s.print();
+    return 0;}
+
+//piggy bank
+#include <iostream>
+#include<string>
+#include<algorithm>
+using namespace std;
+class AddAmount{
+ int amount;
+ int a;
+ public:
+ AddAmount(){
+  this->amount =75;
+ }
+ AddAmount(int a){
+  this->amount = a;
+ }
+ void getdata(int ap){
+  this->a = ap;
+ }
+
+ void add(){
+  int as = amount+a;
+  cout<<as;
+ }
+
+ };
+
+int main()
+{AddAmount a;
+     AddAmount();
+     a.getdata(75);
+     a.add();
+     return 0;}
+
+//area of square and rectangle
+#include <iostream>
+#include<string>
+#include<algorithm>
+using namespace std;
+
+class area{
+
+int length;
+int breadth;
+int side;
+public:
+void rectangle(int l,int b){
+    this->length=l;
+    this->breadth = b;
+    int areaofrectangle = length*breadth;
+    cout<<areaofrectangle<<endl;
+}
+
+void square(int s){
+    this->side = s;
+    int areaofsquare = side*side;
+    cout<<areaofsquare;
+}
+int main(){
+area a;
+     a.rectangle(1,2);
+    a.square(3);
+return 0;}
+
+//palindrome
+#include <iostream>
+#include<string>
+#include<algorithm>
+using namespace std;
+
+class pali{
+string s;
+public:
+bool check(string st){
+    this->s = st;
+    int i=0;
+    int e = s.length();
+    while(i<e){
+        if(s[i]!=s[e]){
+            cout<<"false"<<endl;
+            break;
+        }
+        i++;e--;
+    }
+    cout<<"true";
+    return 0;
+}
+};
+int main(){
+pali p ;
+p.check("tennet");
+return 0;}
+
+//bank    
+#include <iostream>
+#include<string>
+#include<algorithm>
+using namespace std;
+class bank{
+  int amount;
+  public:
+  void banka();
+  void bankb();
+  void bankc();
+ };
+
+  void bank:: banka{
+      int amount;
+      void getbalance(){
+         amount = 1;
+          cout<<amount;
+      }
+  }
+ void bank::  bankb{
+      int amount;
+      void getbalance(){
+          amount =2;
+          cout<<amount;
+     }
+  }
+  void bank::  bankc{
+      int amount;
+      void getbalance(){
+          amount=3;
+          cout<<amount;
+      }
+  }
+int main(){
+ bank b;
+    
+     b.banka();
+     b.bankb();
+     b.bankc(); 
+     return 0;}
