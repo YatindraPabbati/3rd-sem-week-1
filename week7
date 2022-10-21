@@ -1,4 +1,4 @@
-//Displaying all information of employee 
+//Displaying all information of student
 #include<iostream>
 #include<cmath>
 #include<string>
@@ -111,7 +111,7 @@ return 0;}
 
 
 
-// SHOWING EMPLOYEE DETAILS USING MULTIPLE INHERITENCE
+// SHOWING EMPLOYEE DETAILS USING hierarchical ineritence
 
 #include<iostream>
 #include<cmath>
