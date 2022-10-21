@@ -33,7 +33,7 @@ d.getdata();
 d.display()
 return 0;}
 
-//DISPLAYING ALL INFORMATION OF EMPLOYEE USING MULTIPLE INHERITENCE
+//displaying employee data using multiple inheritence
 #include<iostream>
 #include<cmath>
 #include<string>
@@ -71,7 +71,7 @@ p.getdata();
 p.display();
 return 0;}
 
-// FINDING CUBE AND SQUARE USING MULTIPLE INHERITENCE
+//cube and square of number
 #include<iostream>
 #include<cmath>
 #include<string>
@@ -111,7 +111,7 @@ return 0;}
 
 
 
-// SHOWING EMPLOYEE DETAILS USING hierarchical ineritence
+// employee details using hierarchical ineritence
 
 #include<iostream>
 #include<cmath>
@@ -156,7 +156,7 @@ d.getdata();
 d.display();
 return 0;}
 
-// DISPLAYING NUMBER OF FRUITS IN A BASKET
+// number of fruits in basket
 #include<iostream>
 #include<cmath>
 #include<string>
