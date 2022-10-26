@@ -144,3 +144,52 @@ baseclass = &abstr;
 baseclass->getdata();
 baseclass->add();
 return 0;}
+
+//printing marks
+#include <iostream>
+using namespace std;
+class Marks{
+    protected:
+    float physics;
+    float chemisty;
+    float mathematics;
+    public:
+    void getpercentage();
+ 
+};
+
+class Amarks : public Marks{
+    public:
+       Amarks(float phy,float chem,float math){
+        physics=phy;
+        chemisty=chem;
+        mathematics = math;
+    }
+void getpercentage(){
+    float sum = ((physics+chemisty+mathematics)/300)*100;
+    cout<<sum<<endl;
+}
+} ;
+class Bmarks :public Marks{
+    public:
+    float computer;
+         Bmarks(float phy,float chem,float math,float comput){
+        physics=phy;
+        chemisty=chem;
+        mathematics = math;
+        computer=comput;
+    }
+void getpercentage(){
+    float sum = ((physics+chemisty+mathematics+computer)/400)*100;
+    cout<<sum<<endl;
+}
+};
+int main(){
+
+Amarks(40.05,90.8,89.6);
+Bmarks(90.6,56.8,86.9,78.2);
+
+Amarks.getpercentage();
+    Bmarks.getpercentage();
+    return 0;
+}
